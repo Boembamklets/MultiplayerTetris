@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplayer Tetris - Eighties Style</title>
+  <link rel="icon" href="images/TetrisIcon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+
+  <h1>Multiplayer Tetris</h1>
+  <canvas id="tetris" width="200" height="400"></canvas>
+
+  <!-- Scoreboard -->
+  <div class="scoreboard">
+    <div class="player-score" id="player1-score">Player 1: 0</div>
+    <div class="player-score" id="player2-score">Player 2: 0</div>
+    <div class="player-score" id="player3-score">Player 3: 0</div>
+    <div class="player-score" id="player4-score">Player 4: 0</div>
+  </div>
+
+  <!-- Player and Block Selection -->
+  <div class="player-selection">
+    <button id="player1-button" onclick="selectPlayer(1)">Player 1</button>
+    <button id="player2-button" onclick="selectPlayer(2)">Player 2</button>
+    <button id="player3-button" onclick="selectPlayer(3)">Player 3</button>
+    <button id="player4-button" onclick="selectPlayer(4)">Player 4</button>
+  </div>
+
+  <div class="block-selection">
+    <button id = "T-block" onclick="selectPiece('T')"><img src="images/T-block.png" alt="T Block"></button>
+    <button id = "O-block" onclick="selectPiece('O')"><img src="images/O-block.png" alt="O Block"></button>
+    <button id = "L-block" onclick="selectPiece('L')"><img src="images/L-block.png" alt="L Block"></button>
+    <button id = "J-block" onclick="selectPiece('J')"><img src="images/J-block.png" alt="J Block"></button>
+    <button id = "I-block" onclick="selectPiece('I')"><img src="images/i-block.png" alt="I Block"></button>
+    <button id = "S-block" onclick="selectPiece('S')"><img src="images/S-block.png" alt="S Block"></button>
+    <button id = "Z-block" onclick="selectPiece('Z')"><img src="images/Z-block.png" alt="Z Block"></button>
+  </div>
+
+  <!-- On-Screen Controls -->
+  <div class="controls">
+    <button class="control-btn" onclick="moveLeft()"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
+    <button class="control-btn" onclick="rotate()"><i class="fa-solid fa-arrow-rotate-right" style="color: #ffffff;"></i></button>
+    <button class="control-btn" onclick="moveRight()"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
+    <button class="control-btn" onclick="drop()"><i class="fa-solid fa-arrow-down" style="color: #ffffff;"></i></button>
+  </div>
+
+<script src="tetris.js"></script>
+
+</body>
+</html>
