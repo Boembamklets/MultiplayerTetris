@@ -19,13 +19,14 @@ h1 {
 }
 
 .scoreboard {
-    width: 350px;
-    margin: 30px auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 kolommen met gelijke breedte */
-    grid-template-rows: repeat(2, auto);  /* 2 rijen met automatische hoogte */
-    gap: 3px; /* Ruimte tussen de scores */
+	margin: 30px auto;
+	width: 500px;
+    display: flex;
+    gap: 30px; /* Ruimte tussen de scores */
     text-align: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	flex-direction: row;
 }
 
 .player-score {
@@ -42,7 +43,7 @@ button {
     padding: 7px;
     text-decoration: none; 
     color: white;
-	margin: 3px;
+	margin: 5px;
 }
 
 button:hover {
@@ -54,18 +55,30 @@ button:active{
 }
 
 
-.block-selection {
+.block-selection {	
+    margin: 15px auto;
 	display: flex;
 	justify-content: center;
+	gap: 5px;
+}
+
+.player-selection {
+	margin: 15px auto;
+	width: 500px;
+    display: flex;
+    gap: 5px; /* Ruimte tussen de scores */
+    text-align: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
 }
 
 .block-selection button {
-    width: 60px;  /* Pas dit aan naar de gewenste breedte */
+	width: 60px;  /* Pas dit aan naar de gewenste breedte */
     height: 60px; /* Pas dit aan naar de gewenste hoogte */
     display: flex;
 	flex-direction: row;
     justify-content: center;
-    align-items: center;
 }
 
 .block-selection button img {
@@ -75,6 +88,7 @@ button:active{
 }
 
 .controls button {
+	margin: 15px auto;
 	width: 75px;
 	height: 75px;
 	font-size: 50px;
