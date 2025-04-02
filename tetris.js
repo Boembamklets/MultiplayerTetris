@@ -12,7 +12,11 @@ let players = {
   1: { score: 0 },
   2: { score: 0 },
   3: { score: 0 },
-  4: { score: 0 }
+  4: { score: 0 },
+  5: { score: 0 },
+  6: { score: 0 },
+  7: { score: 0 },
+  8: { score: 0 }
 };
 let dropCounter = 0;
 let dropInterval = 1000;
@@ -268,7 +272,6 @@ function rotate() {
   while (collide(board, block)) {
 	block.pos.x += offset;
 	offset = -(offset + (offset > 0 ? 1 : -1));
-	console.log("jow");
   }
 }
 
