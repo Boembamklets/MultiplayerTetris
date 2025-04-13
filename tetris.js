@@ -241,7 +241,7 @@ function lineSweep() {
 
 function addScore(points) {
   players[currentPlayer].score += points;
-  document.getElementById(`player${currentPlayer}-score`).innerText = `Player ${currentPlayer}: ${players[currentPlayer].score}`;
+  document.getElementById(`player${currentPlayer}-score`).innerText = `${players[currentPlayer].score}`;
 }
 
 function pauseGame() {
